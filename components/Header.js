@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { SearchIcon } from "@heroicons/react/solid";
 
 const Header = () => {
   return (
