@@ -1,11 +1,13 @@
 import type { NextPage } from "next";
 import { cities } from "../cities";
 import { houses } from "../houses";
+import Image from "next/image";
 import Head from "next/head";
 import Header from "../components/Header";
 import Banner from "../components/Banner";
 import SmallCard from "../components/SmallCard";
 import MediumnCard from "../components/MediumnCard";
+import LargeCard from "../components/LargeCard";
 
 const Home: NextPage = () => {
   return (
@@ -43,6 +45,13 @@ const Home: NextPage = () => {
             ))}
           </div>
         </section>
+
+        <LargeCard
+          img="https://links.papareact.com/4cj"
+          title="The Greatest Outdoors"
+          description="Whishlist By Airbnb"
+          buttonText=" Get Inspired"
+        />
       </main>
     </div>
   );
