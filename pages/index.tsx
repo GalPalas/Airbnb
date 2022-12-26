@@ -8,6 +8,7 @@ import Banner from "../components/Banner";
 import SmallCard from "../components/SmallCard";
 import MediumnCard from "../components/MediumnCard";
 import LargeCard from "../components/LargeCard";
+import Footer from "../components/Footer";
 
 const Home: NextPage = () => {
   return (
@@ -53,6 +54,8 @@ const Home: NextPage = () => {
           buttonText=" Get Inspired"
         />
       </main>
+
+      <Footer />
     </div>
   );
 };
