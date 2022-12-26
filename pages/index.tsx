@@ -1,9 +1,11 @@
 import type { NextPage } from "next";
-import { cities } from "../data.js";
+import { cities } from "../cities";
+import { houses } from "../houses";
 import Head from "next/head";
 import Header from "../components/Header";
 import Banner from "../components/Banner";
 import SmallCard from "../components/SmallCard";
+import MediumnCard from "../components/MediumnCard";
 
 const Home: NextPage = () => {
   return (
@@ -28,6 +30,16 @@ const Home: NextPage = () => {
                 location={location}
                 distance={distance}
               />
+            ))}
+          </div>
+        </section>
+
+        <section>
+          <h2 className="text-4xl font-semibold py-8">Live Anywhere</h2>
+
+          <div className="flex space-x-3 overflow-scroll scrollbar-hide p-3 -ml-3">
+            {houses.map(({ id, image, title }) => (
+              <MediumnCard key={id} img={image} title={title} />
             ))}
           </div>
         </section>
