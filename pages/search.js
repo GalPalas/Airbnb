@@ -1,8 +1,9 @@
 import React from "react";
+import { format } from "date-fns";
+import { useRouter } from "next/router";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import { useRouter } from "next/router";
-import { format } from "date-fns";
+import InfoCard from "../components/InfoCard";
 
 const Search = ({ searchResult }) => {
   const router = useRouter();
@@ -30,9 +31,38 @@ const Search = ({ searchResult }) => {
             <p className="button">Rooms and Beds</p>
             <p className="button">More filters</p>
           </div>
+
+          <div className="flex flex-col">
+            {searchResult.map(
+              ({
+                img,
+                location,
+                title,
+                description,
+                star,
+                price,
+                total,
+                long,
+                lat,
+              }) => (
+                <InfoCard
+                  key={img}
+                  img={img}
+                  location={location}
+                  title={title}
+                  description={description}
+                  star={star}
+                  price={price}
+                  total={total}
+                  long={long}
+                  lat={lat}
+                />
+              )
+            )}
+          </div>
         </section>
       </main>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };
