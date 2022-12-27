@@ -3,8 +3,10 @@ import Image from "next/image";
 import "react-date-range/dist/styles.css"; // main style file
 import "react-date-range/dist/theme/default.css"; // theme css file
 import { DateRangePicker } from "react-date-range";
+import { useRouter } from "next/router";
 
-const Header = () => {
+const Header = ({ placeholder }) => {
+  const router = useRouter();
   const [searchInput, setSearchInput] = useState("");
   const [numberOfGuests, setNumberOfGuests] = useState(1);
   const [startDate, setStartDate] = useState(new Date());
@@ -25,9 +27,24 @@ const Header = () => {
     setSearchInput("");
   };
 
+  const search = () => {
+    router.push({
+      pathname: "/search",
+      query: {
+        location: searchInput,
+        startDate: startDate.toISOString(),
+        endDate: endDate.toDateString(),
+        numberOfGuests,
+      },
+    });
+  };
+
   return (
     <header className="sticky top-0 z-50 grid grid-cols-3 bg-white shadow-md p-5 md:px-10">
-      <div className="relative flex item-center h-10 my-auto cursor-pointer">
+      <div
+        className="relative flex item-center h-10 my-auto cursor-pointer"
+        onClick={() => router.push("/")}
+      >
         <Image
           src="https://links.papareact.com/qd3"
           alt="Airbnb Logo"
@@ -39,7 +56,7 @@ const Header = () => {
         <input
           value={searchInput}
           type="text"
-          placeholder="Start your search"
+          placeholder={placeholder || "Start your search"}
           className="flex-grow pl-5 bg-transparent outline-none text-sm text-gray-600 placeholder-gray-400"
           onChange={(e) => setSearchInput(e.target.value)}
         />
@@ -130,7 +147,9 @@ const Header = () => {
             <button className="flex-grow text-gray-500" onClick={resetInput}>
               Cancel
             </button>
-            <button className="flex-grow text-red-400">Search</button>
+            <button className="flex-grow text-red-400" onClick={search}>
+              Search
+            </button>
           </div>
         </div>
       )}
