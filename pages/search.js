@@ -4,6 +4,7 @@ import { useRouter } from "next/router";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import InfoCard from "../components/InfoCard";
+import MapView from "../components/MapView";
 
 const Search = ({ searchResult }) => {
   const router = useRouter();
@@ -13,14 +14,12 @@ const Search = ({ searchResult }) => {
   const formattedEndDate = format(new Date(endDate), "dd MMMM yy");
   const range = `${formattedStartDate} - ${formattedEndDate}`;
 
-  console.log(searchResult);
-
   return (
     <div>
       <Header
         placeholder={`${location} | ${range} | ${numberOfGuests} guests`}
       />
-      <main className="flex">
+      <main className="flex overflow-hidden">
         <section className="flex-grow pt-14 px-6">
           <p className="text-sm">{`300+ Stays - ${range} for ${numberOfGuests} guests`}</p>
           <h1 className="text-3xl font-semibold mt-2 mb-6">{`Stays in ${location}`}</h1>
@@ -61,8 +60,12 @@ const Search = ({ searchResult }) => {
             )}
           </div>
         </section>
+
+        <section className="hidden cursor-grabbing lg:inline-flex xl:min-w-[600px]">
+          <MapView searchResult={searchResult} />
+        </section>
       </main>
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 };
