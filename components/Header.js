@@ -48,8 +48,8 @@ const Header = ({ placeholder }) => {
         <Image
           src="https://links.papareact.com/qd3"
           alt="Airbnb Logo"
-          width={100}
-          height={40}
+          width={150}
+          height={50}
         />
       </div>
       <div className="flex items-center rounded-full py-2 md:shadow-sm md:border-2">
