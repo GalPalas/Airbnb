@@ -1,27 +1,28 @@
-# Next.js + Tailwind CSS Example
+# Airbnb - Travel Exploration Platform
 
-This example shows how to use [Tailwind CSS](https://tailwindcss.com/) [(v3.2)](https://tailwindcss.com/blog/tailwindcss-v3-2) with Next.js. It follows the steps outlined in the official [Tailwind docs](https://tailwindcss.com/docs/guides/nextjs).
+![game-hub](https://github.com/GalPalas/3D_Portfolio/blob/master/src/assets/airbnb.jpg?raw=true)
 
-## Deploy your own
+## Introduction
+Airbnb is a web application that aims to revolutionize the way you discover and experience unique accommodations. With Airbnb, you can effortlessly find your ideal stay based on location, amenities, and more, providing you with a personalized and unforgettable travel experience.
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example) or preview live with [StackBlitz](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/with-tailwindcss)
+### Technologies Used
+To build this site, I used the following technologies:
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-tailwindcss&project-name=with-tailwindcss&repository-name=with-tailwindcss)
+- **Next.js:** Next.js is a powerful React framework that enables efficient server-side rendering, static site generation, and dynamic capabilities. We leveraged Next.js to build a fast and scalable web app that provides seamless user experiences.
 
-## How to use
+- **JavaScript:** JavaScript is the backbone of Airbnb, allowing us to create interactive and dynamic features for the web application. We utilized JavaScript to implement functionality and enhance the user interface.
 
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init), [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/), or [pnpm](https://pnpm.io) to bootstrap the example:
+- **Tailwind CSS:** Chakra-UI is a simple, modular and accessible component library that gives us the ability to easily create a modern and responsive user interface. It also provides us with pre-built styles and components that we can use throughout our website.
 
-```bash
-npx create-next-app --example with-tailwindcss with-tailwindcss-app
-```
+Overall, these technologies help us to create a fast, reliable, and user-friendly website that provides a great experience for video game enthusiasts.
 
-```bash
-yarn create next-app --example with-tailwindcss with-tailwindcss-app
-```
+### Installation
+To run this project on your local machine, please follow these steps:
 
-```bash
-pnpm create next-app --example with-tailwindcss with-tailwindcss-app
-```
+- Clone the repository: git clone https://github.com/GalPalas/airbnb.git.
+- Navigate to the project directory: cd airbnb.
+- Install the dependencies: npm install.
+- Start the development server: npm run dev.
+- Open your web browser and navigate to http://localhost:5173.
 
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+
