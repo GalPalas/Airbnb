@@ -12,8 +12,7 @@ To build this site, I used the following technologies:
 
 - **JavaScript:** JavaScript is the backbone of Airbnb, allowing us to create interactive and dynamic features for the web application. We utilized JavaScript to implement functionality and enhance the user interface.
 
-- **Tailwind CSS:** Chakra-UI is a simple, modular and accessible component library that gives us the ability to easily create a modern and responsive user interface. It also provides us with pre-built styles and components that we can use throughout our website.
-
+- **Tailwind CSS:** Tailwind CSS is a highly customizable CSS framework that provided us with a comprehensive set of utility classes. With Tailwind CSS, we could easily create responsive and visually appealing designs, ensuring a delightful user interface.
 Overall, these technologies help us to create a fast, reliable, and user-friendly website that provides a great experience for video game enthusiasts.
 
 ### Installation
